@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: "mongodb+srv://rohikakad:Shree%402020@cluster0.eah3l.mongodb.net/knowledge-management?retryWrites=true&w=majority"
