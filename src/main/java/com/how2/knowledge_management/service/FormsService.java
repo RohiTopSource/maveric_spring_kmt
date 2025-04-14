@@ -30,10 +30,15 @@ public class FormsService {
     }
 
     // UPDATE
-    public ResponseEntity<Task> updateForm(Task form){
-       Optional<Task> existing = formRepo.findById(form.getId());
+    public ResponseEntity<Task> updateForm(String id, Task form){
+       Optional<Task> existing = formRepo.findById(id);
        if(existing.isPresent()){
-           Task updated = formRepo.save(form);
+          Task task = existing.get();
+          task.setTitle(form.getTitle());
+          task.setDesc(form.getDesc());
+          task.setAssetManager(form.getAssetManager());
+          task.setAssetSpecialist(form.getAssetSpecialist());
+           Task updated = formRepo.save(task);
            return ResponseEntity.ok(updated);
 
        }else {
