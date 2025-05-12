@@ -1,4 +1,4 @@
-package com.how2.knowledge_management;
+package com.how2.knowledge_management.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -25,10 +25,6 @@ public class FormsService {
         return formRepo.findAll();
     }
 
-    public Optional<Task> getFormById(String id){
-        return formRepo.findById(id);
-    }
-
     // UPDATE
     public ResponseEntity<Task> updateForm(String id, Task form){
        Optional<Task> existing = formRepo.findById(id);
